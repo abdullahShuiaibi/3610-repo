@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+
+
+var fruit = [
+	{name:"Apple", quantity:20, color:"red"},
+	{name:"Orange", quantity:10, color:"orange"},
+    {name:"Banana", quantity:15, color:"Yellow"},
+    {name:"Kiwi", quantity:3, color:"green"},
+    {name:"blueberry", quantity:5, color:"blue"},
+    {name:"grapes", quantity:8, color:"purple"}
+];
+
+var xValues = fruit.map(value => value.name);
+var yValues = fruit.map(value => value.quantity);
+var barColors = fruit.map(value => value.color);
+
+
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Lab 1"
+    }
+  }
+});
+</script>
+
+</body>
+</html>
