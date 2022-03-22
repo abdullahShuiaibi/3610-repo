@@ -24,10 +24,9 @@ Scene.start = function () {
     	Scene.mainLoop();
 	}
 };
-
-// Once the basic HTML document is loaded and its parsing has taken place, start the scene.
+function startGame(){
 document.addEventListener( 'click', Scene.start);
-
+}
 Scene.clearCanvas = function () {
     Scene.canvasContext.fillStyle = "white";
     Scene.canvasContext.fillRect(0, 0, Scene.canvas.width, Scene.canvas.height);

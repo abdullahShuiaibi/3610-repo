@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>form</title>
+<style>
+</style></head>
+<body onload="reloadData()">
+  <button><a href="https://abdullahshuiaibi.github.io/3610-repo/">Go Back</a></button>
+    <h2>CISC 3610 Form Lab3 </h2>
+
+      <label for="fname">Notes Title:</label><br>
+      <br>
+      <input id="title" name="fname" oninput="saveTitle()"><br><br>
+      
+      <label for="fname">Take Your Notes Here:</label></label><br><br>
+
+      <textarea id="inputNotes" name="inputNotes" rows="10" cols="80" oninput="saveNotes()">
+         
+        </textarea>
+        <br>
+        <br>
+      <input type="reset" value="clear" onclick="clearData()">
+    
+    <p>Type some Information which will store the data in local storage.
+        <br> Click clear to remove all data from form and local storage. </p>
+</body>
+</html>
+<script>
+
+function saveTitle(){
+var titleSaved = document.getElementById("title").value;
+  window.localStorage.setItem("titleSaved", titleSaved)
+}
+
+function loadTitle(){
+    document.getElementById("title").value =  window.localStorage.getItem("titleSaved");
+}
+
+function saveNotes(){
+  var notesSaved = document.getElementById("inputNotes").value;
+  window.localStorage.setItem("notes", notesSaved)
+    }
+
+function reloadNotes(){
+    document.getElementById("inputNotes").innerHTML =  window.localStorage.getItem("notes");
+}
+
+function reloadData(){
+    reloadNotes();
+    loadTitle();
+}
+
+function clearData(){
+    document.getElementById("inputNotes").value = ''
+    document.getElementById("title").value  = ''
+    localStorage.clear();
+    reloadData();
+}
+
+
+</script>
+
+
