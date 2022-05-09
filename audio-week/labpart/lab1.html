@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <button><a href="https://abdullahshuiaibi.github.io/abdullah_shuiaibi_portfolio/">Go Back</a></button>
+
+<audio id="drum">
+  <source src="drum.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="roar">
+    <source src="roar.wav" type="audio/mpeg">
+</audio>
+
+<audio id="dog">
+    <source src="dog.wav" type="audio/mpeg">
+</audio>
+
+<audio id="alarm">
+    <source src="alarm.wav" type="audio/mpeg">
+</audio>
+
+<audio id="swoosh">
+    <source src="swoosh.wav" type="audio/mpeg">
+</audio>
+
+<p> Click the picture to hear the sound. </p>
+
+<button onclick="playDrum()" type="button"><img src="drum.png" alt="Drum" width="200" height="200"></button>
+<button onclick="playRoar()" type="button"><img src="lion.png" alt="Roar" width="200" height="200"></button>
+<button onclick="playDog()" type="button"><img src="dog.png" alt="Dog" width="200" height="200"></button>
+<button onclick="playAlarm()" type="button"><img src="alarm.png" alt="Alarm" width="200" height="200"></button>
+<button onclick="playSwoosh()" type="button"><img src="swoosh.png" alt="Swoosh" width="200" height="200"></button>
+
+
+<script>
+
+
+function playDrum() { 
+  var sound = document.getElementById("drum"); 
+  sound.play(); 
+} 
+
+function playRoar(){
+  var sound = document.getElementById("roar"); 
+  sound.play(); 
+}
+
+
+function playDog(){
+  var sound = document.getElementById("dog"); 
+  sound.play(); 
+}
+
+
+
+function playAlarm(){
+  var sound = document.getElementById("alarm"); 
+  sound.play(); 
+}
+
+
+
+function playSwoosh(){
+  var sound = document.getElementById("swoosh"); 
+  sound.play(); 
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
